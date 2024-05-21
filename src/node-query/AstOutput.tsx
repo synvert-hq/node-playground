@@ -40,7 +40,7 @@ const IGNORE_KEYS = [
 const AstOutput: React.FC<AstOutputProps> = ({ node }) => {
   const { language } = useParams() as { language: string };
   const [syntaxKinds, setSyntaxKinds] = useState<{ [kind: string]: string }>(
-    {}
+    {},
   );
   const fetchSyntaxKinds = useCallback(async () => {
     if (!["javascript", "typescript"].includes(language)) {
@@ -63,7 +63,7 @@ const AstOutput: React.FC<AstOutputProps> = ({ node }) => {
 
   const getNewKeyValue = (
     node: Node,
-    key: string
+    key: string,
   ): [key: string, value: any] => {
     const value = (node as any)[key];
     if (typeof value === "object") {
