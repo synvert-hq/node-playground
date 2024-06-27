@@ -24,7 +24,7 @@ function NodeMutation() {
     setOutputCode,
   } = useAppContext();
   const [mutationExample, setMutationExample] = useState<string>(
-    DEFAULT_MUTATION_EXAMPLE[language]
+    DEFAULT_MUTATION_EXAMPLE[language],
   );
   const [mutationCode, setMutationCode] = useState<string>("");
   const [ranges, setRanges] = useState<Range[]>([]);
@@ -33,7 +33,7 @@ function NodeMutation() {
     (mutationExample: string) => {
       setMutationExample(mutationExample);
     },
-    [language]
+    [language],
   );
 
   const parseNql = useCallback(async () => {

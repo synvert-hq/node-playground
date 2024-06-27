@@ -39,7 +39,7 @@ export const SourceCodeInput: React.FC<SourceCodeInputProps> = ({
   };
   const editorDidMount = (
     editor: monaco.editor.IStandaloneCodeEditor,
-    monaco: Monaco
+    monaco: Monaco,
   ) => {
     editorRef = editor;
     monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({
@@ -70,10 +70,10 @@ export const SourceCodeInput: React.FC<SourceCodeInputProps> = ({
           range.start.line,
           range.start.column,
           range.end.line,
-          range.end.column
+          range.end.column,
         ),
         options: { inlineClassName: "bg-cyan-800" },
-      }))
+      })),
     );
     setDecorationIds(ids);
     return () => {

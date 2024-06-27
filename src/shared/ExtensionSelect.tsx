@@ -10,7 +10,7 @@ const ExtensionSelect: React.FC = () => {
   const codeExtensions = CODE_EXTENSIONS[language];
 
   const handleExtensionChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
+    event: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     const extension = event.target.value;
     setExtension(extension);
